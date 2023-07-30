@@ -28,3 +28,20 @@
     box-shadow: -1px 4px 5px -1px rgba(0,0,0,0.61);
 }
 
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    border: 1px solid black;
+    margin: 2em;
+    background-color: lightblue;
+}
+
+.input-area{
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,3 +1,6 @@
+let form = document.querySelector("#form")
+let inputs = form.elements; 
+
 
 let bookArray = [];
 

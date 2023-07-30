@@ -1,22 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library</title>
-    <link rel="stylesheet" href="styles.css">
-    <script type = "text/javascript" src="./script.js" defer></script>  
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="text/javascript" src="./script.js" defer></script>
+  </head>
+  <body>
     <div class="container">
-        <div class="header">
-            <h1>LIBRARY PROJECT</h1>
-            <p class="sign-in">Sign In!</p>
-        </div>
+      <div class="header">
+        <h1>LIBRARY PROJECT</h1>
+        <p class="sign-in">Sign In!</p>
+      </div>
 
-        <div class="main">
-            <button type="button">OPEN MODAL</button>
+      <div class="main">
+        <!-- <button type="button">OPEN MODAL</button> -->
+
+        <div class="data-modal">
+            <form action="#" id="form">
+              <h3>Add book</h3>
+            <div class="input-area">
+              <label for="title">Title</label>
+              <input type="text" name="title" id="title" />
+            </div>
+            <div class="input-area">
+              <label for="author">Author</label>
+              <input type="text" name="author" id="author" />
+            </div>
+            <div class="input-area">
+              <label for="pages">Number of Pages</label>
+              <input type="number" name="pages" id="pages" />
+            </div>
+            <button type="submit" class="submit">Add book</button>
+          </form>
         </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
