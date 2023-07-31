@@ -1,8 +1,14 @@
-let form = document.querySelector("#form")
-let inputs = form.elements; 
+const openModalBtn = document.getElementById('openModal');
+const closeModalBtn = document.querySelector('.close-modal')
+const bookForm = document.getElementById('addBook');
 
 
-let bookArray = [];
+
+
+// No storage for now, just an array to play!
+const library = [];
+
+//constructor
 
 function Book(title, author, pages,) {
 
@@ -11,14 +17,32 @@ function Book(title, author, pages,) {
     this.pages = pages
 };
 
-const addBook = (title, author, pages) => { 
+// Use input values to create the obj
+const getInput = () => {
+    const title = document.getElementById('title').value;
+    const author = document.getElementById('author').value;
+    const pages = document.getElementById('pages').value;
+    const isRead = document.getElementById('isread').checked;
 
-    let book = new Book(title, author, pages);
-    bookArray.push(book);
-
-    return bookArray;
+    return new Book(title, author, pages, isRead);
 }
 
-console.log(addBook("Star Wars", "John Lucas", 100));
-console.log(addBook("Syuir asds", "Iohn cucas", 120));
+const addBook = (e) => {
+    e.preventDefault();
+
+    const newBook = getInput();
+    library.push(newBook);
+
+    console.log(library)
+}
+
+// event listeners
+openModalBtn.addEventListener('click', () => {
+    bookForm.classList.add('modal-open')
+})
+
+closeModalBtn.addEventListener('click', () => bookForm.classList.remove('modal-open'))
+
+bookForm.onsubmit = addBook;
+
 

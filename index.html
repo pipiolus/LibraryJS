@@ -15,22 +15,49 @@
       </div>
 
       <div class="main">
-        <!-- <button type="button">OPEN MODAL</button> -->
+        <button type="button" id="openModal">OPEN MODAL</button>
 
-        <div class="data-modal">
-            <form action="#" id="form">
+        <div class="modal">
+            <form action="#" id="addBook">
               <h3>Add book</h3>
+              <button type="button" class="close-modal">X</button>
             <div class="input-area">
               <label for="title">Title</label>
-              <input type="text" name="title" id="title" />
+              <input 
+              type="text" 
+              name="title" 
+              id="title" 
+              placeholder="Title of book"
+              required
+              />
             </div>
             <div class="input-area">
               <label for="author">Author</label>
-              <input type="text" name="author" id="author" />
+              <input 
+              type="text" 
+              name="author" 
+              id="author" 
+              placeholder="Author's name"
+              required
+              />
             </div>
             <div class="input-area">
               <label for="pages">Number of Pages</label>
-              <input type="number" name="pages" id="pages" />
+              <input 
+              type="number" 
+              name="pages" 
+              id="pages" 
+              placeholder="Number of pages"
+              required
+              />
+            </div>
+            <div class="input-area">
+              <label for="isread">Have you finished this book?</label>
+              <input 
+              type="checkbox" 
+              name="isread" 
+              id="isread"
+              />
             </div>
             <button type="submit" class="submit">Add book</button>
           </form>

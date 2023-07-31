@@ -26,6 +26,7 @@
     padding: 2em;
     background-color: var(--header-bg);
     box-shadow: -1px 4px 5px -1px rgba(0,0,0,0.61);
+    margin-bottom: 3em;
 }
 
 .main {
@@ -35,13 +36,34 @@
 }
 
 form{
-    border: 1px solid black;
-    margin: 2em;
+    width: 100%;
     background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.modal{
+    border: 1px solid blue;
+    width: 20vw;
+    height: auto;
+    visibility: hidden;
+}
+
+.modal-open{
+    visibility: visible;
 }
 
 .input-area{
-    padding: 2em;
+    padding: 1em;
     display: flex;
     flex-direction: column;
+}
+
+input[type=text]{
+    height: 3em;
+}
+
+input[type=number]{
+    height: 2em;
 }
