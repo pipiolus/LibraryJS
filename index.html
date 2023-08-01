@@ -14,9 +14,12 @@
         <p class="sign-in">Sign In!</p>
       </div>
 
-      <div class="main">
-        <button type="button" id="openModal">OPEN MODAL</button>
-
+      <main class="main">
+        <div class="open-modal-area"> 
+        <button type="button" id="openModal">&#43;Add Book</button>
+      </div>
+    
+        <div class="book-grid" id="booksGrid"></div>
         <div class="modal">
             <form action="#" id="addBook">
               <h3>Add book</h3>
@@ -51,18 +54,22 @@
               required
               />
             </div>
-            <div class="input-area">
-              <label for="isread">Have you finished this book?</label>
+            <span>Did u read it?</span>
+            <div class="btn-holder"> 
+            <div class="btn-circle">
+              <label for="isread"></label>
               <input 
               type="checkbox" 
               name="isread" 
               id="isread"
               />
             </div>
+          </div>
             <button type="submit" class="submit">Add book</button>
           </form>
         </div>
-      </div>
+      </main>
     </div>
+    
   </body>
-</html>
+  </html>
